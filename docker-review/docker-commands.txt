@@ -1,0 +1,31 @@
+RUN CONTAINERS
+docker run <image>
+docker run -p 8080:8080 <image> (-p to map a port from incoming request port to the port in the container)
+docker create <image>
+docker start -a <image> (-a to show the logs)
+docker exec -it <containerId> <command>
+docker exec -it <containerId> sh
+docker logs <containerId> (to show the logs that a container produced)
+
+-d to detach
+--rm to remove the container after it stops
+-a to attach
+-it to be able to add inputs
+sh (generally to stat a shell inside the container)
+
+LIST CONTAINERS
+docker ps (to list running containers)
+docker ps --all (to list all containers that has ever run)
+
+STOP CONTAINERS
+docker stop <containerId>
+docker kill <containerId>
+
+DELETE CONTAINERS
+docker system prune
+
+BUILD IMAGES
+docker build .
+docker build -t <dockerId>/<name>:<version> .
+
+-t tagging the image
